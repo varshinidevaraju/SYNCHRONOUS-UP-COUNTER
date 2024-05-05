@@ -34,13 +34,40 @@ However, the remaining flip-flops should be made ready to toggle only when all l
 
 /* Program for flipflops and verify its truth table in quartus using Verilog programming. 
 
-Developed by: RegisterNumber:
+Developed by:D.Varshini
+RegisterNumber:212223230234
 */
+```
+module ex10(clk, sin, q);
+input clk;
+input sin;
+output [3:0] q;
+reg [3:0] q;
+always @(posedge clk)
+begin
+q[0] <= sin;
+q[1] <= q[0];
+q[2] <= q[1];
+q[3] <= q[2];
+end
+endmodule
+
+```
+
 
 **RTL LOGIC UP COUNTER**
 
+![11o1](https://github.com/varshinidevaraju/SYNCHRONOUS-UP-COUNTER/assets/144870750/fef43564-80fc-4998-9146-1fa2d3433e0e)
+
 **TIMING DIAGRAM FOR IP COUNTER**
+
+![11o2](https://github.com/varshinidevaraju/SYNCHRONOUS-UP-COUNTER/assets/144870750/3dbac9e7-4108-4169-992d-4ac2388a96d6)
+
 
 **TRUTH TABLE**
 
+![11o3](https://github.com/varshinidevaraju/SYNCHRONOUS-UP-COUNTER/assets/144870750/9c8f53f2-7992-40c1-83ee-bf1c8cce7773)
+
+
 **RESULTS**
+SISO Shift Register using verilog and validating their functionality using their functional tables has successful execution of the program.
